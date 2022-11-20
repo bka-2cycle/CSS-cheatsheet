@@ -1,14 +1,15 @@
+/* universal styles */
 :root {
     --dark: black;
     --text-color:rgb(94, 243, 19);
 }
-
 
 * {
     padding-left: 20px;
     padding-right: 20px;
 }
 
+/* element styles for body content */
 body {
     background-color: var(--dark);
 }
@@ -22,7 +23,6 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
 
 h1 {
@@ -37,20 +37,17 @@ p {
     color: var(--text-color);
 }
 
+/* all class styles for each box/module */
 .module-text {
     font-size: smaller;
     margin-top: 0px;
 }
 
 .module {
-    /*background-color: aqua;*/
-    /*max-width: 400px;*/
     display:flex;
     flex-direction: column;
     width: 350px;
     min-width: 320px;
-
-
     border-style: dashed;
     border-color: beige;
     margin: 15px;
@@ -79,9 +76,9 @@ p {
     padding-bottom: 5px;
     border-radius: 4px;
     user-select: all;
-    /*text-indent: -60px;*/
 }
 
+/* transition on hover styles */
 .code-glow .hd-glow {
     transition: all 0.5s ease-in-out;
 }
@@ -93,18 +90,22 @@ p {
     rgba(232, 102, 236, 1);
 }
 
+/* media queries */
 /*@media only screen and (max-width: 992px) {
     .module {
       width: max-content;
-    }*/
+    }
+}*/
 
-    @media only screen and (max-width: 768px) {
-        .module {
-          float:none;
-          width: 50%;
-        }
+@media only screen and (max-width: 768px) {
+    .module {
+        float:none;
+        width: 50%;
+    }
+}
 
-        @media only screen and (max-width: 480px) {
-            .module {
-              width: 100%;
-            }
+@media only screen and (max-width: 480px) {
+    .module {
+        width: 100%;
+    }
+}
